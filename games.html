@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PixelPlay | Cloud Gaming</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="PixelPlay" style="height: 40px;">
+            </a>
+            
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+    
+            <div class="nav-menu" id="navMenu">
+                <a href="games.html" class="nav-link">Games</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="dropdown">
+                    <button class="dropbtn">More <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="about.html#team">Our Team</a>
+                        <a href="games.html#top-rated">Top Games</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="games-library">
+            <div class="library-header">
+                <h1>Game Library</h1>
+                <div class="library-controls">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search games...">
+                        <button><i class="fas fa-search"></i></button>
+                    </div>
+                    <div class="filter-group">
+                        <label>Sort by:</label>
+                        <select id="sortFilter">
+                            <option value="popular">Popular</option>
+                            <option value="newest">Newest</option>
+                            <option value="rating">Rating</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="games-grid">
+                <!-- Game cards remain same structure but with improved styling -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="disclaimer">
+        <p>⚠️ Disclaimer: This is a fictional website created for educational purposes. 
+           PixelPlay is not a real company. No actual games can be played here.</p>
+    </footer>
+</body>
+</html>
