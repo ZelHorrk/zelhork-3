@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelPlay | About</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="logo.svg" alt="PixelPlay" style="height: 40px;">
+            </a>
+            
+            <button class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="nav-menu" id="navMenu">
+                <a href="games.html" class="nav-link">Games</a>
+                <a href="about.html" class="nav-link">About</a>
+                <div class="dropdown">
+                    <button class="dropbtn">More <i class="fas fa-chevron-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="about.html#team">Our Team</a>
+                        <a href="games.html#top-rated">Top Games</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="about-section">
+        <div class="container">
+            <h1>About PixelPlay</h1>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Our Story</h2>
+                    <p>Founded in 2023 by a passionate developer, PixelPlay started as 
+                       a personal project and evolved into this demo platform.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="avatar">
+                            <img src="https://static.wikia.nocookie.net/silly-cat/images/d/d5/Maxwell.png/revision/latest?cb=20231001194454" alt="ZelHork Avatar">
+                        </div>
+                        <h3>ZelHork</h3>
+                        <p>CEO & Solo Developer</p>
+                        <div class="tags">
+                            <span>Code Wizard</span>
+                            <span>Cat Warrior</span>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="avatar">
+                            <img src="https://static.wikia.nocookie.net/silly-cat/images/d/d5/Maxwell.png/revision/latest?cb=20231001194454" alt="ZelHork Avatar">
+                        </div>
+                        <h3>ZelHork</h3>
+                        <p>QA Tester & Support</p>
+                        <div class="tags">
+                            <span>Mosquito</span>
+                            <span>Game Master</span>
+                        </div>
+                    </div>
+                </div>
+    </section>
+
+    <footer class="disclaimer">
+        <p>⚠️ Disclaimer: This is a fictional website created for educational purposes. 
+           PixelPlay is not a real company. No actual games can be played here.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
