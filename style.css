@@ -1,0 +1,272 @@
+:root {
+    --primary: #6C5CE7;
+    --secondary: #A8A5E6;
+    --dark: #2D3436;
+    --light: #FFFFFF;
+    --gray: #636E72;
+    --gradient: linear-gradient(135deg, #6C5CE7 0%, #84DEE6 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: var(--dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Navigation */
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1rem 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--dark);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: var(--primary);
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 1rem;
+    min-width: 200px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Hero Section */
+.hero {
+    padding: 140px 0 60px;
+    background: var(--gradient);
+    color: var(--light);
+    min-height: 100vh;
+}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-bar {
+    max-width: 600px;
+    margin: 2rem auto;
+    display: flex;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px 0 0 50px;
+    font-size: 1rem;
+}
+
+.search-bar button {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    background: var(--light);
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* Games Page */
+.games-library {
+    padding: 100px 0 40px;
+}
+
+.library-header {
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.library-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.game-card {
+    background: var(--light);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+/* About Page */
+.about-section {
+    padding: 100px 0;
+}
+
+.team-section {
+    margin-top: 4rem;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.team-card {
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    overflow: hidden;
+}
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.tags span {
+    background: rgba(108, 92, 231, 0.1);
+    color: var(--primary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.disclaimer {
+    background: var(--dark);
+    color: var(--light);
+    padding: 2rem;
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.disclaimer p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 2rem;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .dropdown-content {
+        position: static;
+        box-shadow: none;
+        padding: 0.5rem 0 0 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .library-controls {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
